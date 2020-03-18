@@ -4,11 +4,7 @@
   "description": "Visualizing sorting algorithm",
   "main": "script.js",
   "scripts": {
-    "de": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "author": "kitharvey",
   "license": "MIT",
