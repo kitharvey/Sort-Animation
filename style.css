@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    background-color: #35363A;
+}
+
+#buttons {
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#portrait {
+    
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -52.5%)
+} 
