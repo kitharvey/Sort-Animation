@@ -14,5 +14,10 @@
   "homepage": "https://github.com/kitharvey/kitharvey.github.io/Sort-Animation",
   "dependencies": {
     "gh-pages": "^2.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitharvey/Sort-Animation.git"
   }
 }
