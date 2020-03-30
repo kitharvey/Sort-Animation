@@ -10,11 +10,11 @@ const droplist = document.getElementById('list')
 const context = canvas.getContext('2d')
 const h = window.innerHeight
 const w = window.innerWidth
-let scale = 1
-let arr = []
-let arrayCopy = []
 canvas.height=h-120
 canvas.width=w-120
+let scale = 1
+
+
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -27,6 +27,7 @@ for (let i=0; i<canvas.width; i+=scale) {
     }
     arrayCopy = arr.slice()
     draw(arr)
+    return arr
 }
 
 
@@ -78,6 +79,7 @@ function bubble(arr){
 }
 
 function bubbleSort(){
+  let arr = generate()
   let animation = bubble(arr)
   let d = 0
   animation.forEach((x) => {
@@ -111,6 +113,7 @@ function selection(arr){
 }
 
 function selectionSort(){
+  let arr = generate()
   let animation = selection(arr)
   let d = 0
   animation.forEach((x) => {
@@ -143,6 +146,7 @@ function insertion(arr){
 }
 
 function insertionSort(){
+  let arr = generate()
   let animation = insertion(arr)
   let d = 0
   animation.forEach((x) => {
@@ -206,6 +210,8 @@ while(k <= end) {
 }
 
 function mergeSort(){
+  let arr = generate()
+  let arrayCopy = arr.slice(0)
   let animation = merge(arr)
   let d = 0
   animation.forEach((x) => {
@@ -253,12 +259,13 @@ function partition(arr, pivot, left, right, animation){
      animation.push(arr.slice())
    }
  }
- swap(arr, right, partitionIndex);
- animation.push(arr.slice())
- return partitionIndex;
+  swap(arr, right, partitionIndex);
+  animation.push(arr.slice())
+  return partitionIndex;
 }
 
 function quickSort(){
+  let arr = generate()
   let animation = quick(arr)
   let d = 0
   animation.forEach((x) => {
@@ -317,6 +324,7 @@ function siftDown(array, start, end, animation) {
 }
 
 function heapSort(){
+  let arr = generate()
   let animation = heap(arr)
   let d = 0
   animation.forEach((x) => {
