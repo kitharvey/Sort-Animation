@@ -1,26 +1,59 @@
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: white;
+}
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     margin: 0;
     overflow: hidden;
     background-color: #35363A;
+    
+
 }
 
-#buttons {
-    position: absolute;
-    top: 2.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin: 20px;
+}
+
+.container #buttons {
+    margin: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    text-decoration: none;
+    font-weight:400;
 }
 
-#portrait {
-    position: absolute;
-    top: 52.5%;
-    left: 50%;
-    transform: translate(-50%, -52.5%)
-} 
+a, select {
+    padding: 5px 20px;
+    margin: 5px 5px;
+    border:0.15em solid white;
+    text-align: center;
+    background-color:white;
+    box-sizing: border-box;
+    color: black;
+    font-family: sans-serif;
+    font-weight:400;
+    text-decoration:none;
+    user-select: none;
+}
+
+a:hover, select:hover{
+    border-color:#7a7a7a;
+    cursor: pointer;
+}
+a:active{
+    background-color:#999999;
+}
