@@ -10,12 +10,9 @@ html{
 }
 
 body {
-
     margin: 0;
     overflow: hidden;
     background-color: #35363A;
-    
-
 }
 
 .container {
@@ -26,14 +23,14 @@ body {
     margin: 20px;
 }
 
-.container #buttons {
+.container .buttons {
     margin: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     text-decoration: none;
-    font-weight:400;
+    
 }
 
 a, select {
@@ -45,10 +42,11 @@ a, select {
     box-sizing: border-box;
     color: black;
     font-family: sans-serif;
-    font-weight:700;
+    font-weight:400;
     text-decoration:none;
     font-size: 1rem;
     user-select: none;
+    text-transform: uppercase;
 }
 
 a:hover, select:hover{
