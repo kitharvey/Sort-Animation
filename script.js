@@ -3,15 +3,15 @@
 // console.log(bubble)
 
 //////////////////////////////////////////////////////////////////////////
-const genBtn = document.getElementById('genBtn')
-const sortBtn = document.getElementById('sortBtn')
-const canvas = document.getElementById('portrait')
-const droplist = document.getElementById('list')
+const genBtn = document.querySelector('.genBtn')
+const sortBtn = document.querySelector('.sortBtn')
+const canvas = document.querySelector('.portrait')
+const droplist = document.querySelector('.list')
 const context = canvas.getContext('2d')
 const h = window.innerHeight
 const w = window.innerWidth
-canvas.height=h-120
-canvas.width=w-120
+canvas.height=h-100
+canvas.width=w-80
 let scale = 1
 
 
