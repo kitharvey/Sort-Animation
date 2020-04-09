@@ -10,8 +10,8 @@ const droplist = document.querySelector('.list')
 const context = canvas.getContext('2d')
 const h = window.innerHeight
 const w = window.innerWidth
-canvas.height=h-120
-canvas.width=w-120
+canvas.height=h-100
+canvas.width=w-80
 let scale = 1
 
 
