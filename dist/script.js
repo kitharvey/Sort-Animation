@@ -25,9 +25,9 @@ for (let i=0; i<canvas.width; i+=scale) {
     let rand = getRand(5, canvas.height)
     arr.push(rand)
     }
-    arrayCopy = arr.slice()
-    draw(arr)
-    return arr
+  arrayCopy = arr.slice()
+  draw(arr)
+  return arr
 }
 
 
