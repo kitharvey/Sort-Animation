@@ -38,7 +38,7 @@ function draw(array) {
     let k = 0
     array.forEach(x => {
       context.fillStyle = '#b2bcc5'
-      context.fillRect(k, canvas.height, scale, -x)
+      context.fillRect(k, canvas.height, scale-1, -x)
       k+=scale
     })
 }
