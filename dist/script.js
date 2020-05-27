@@ -15,6 +15,7 @@ const w = window.innerWidth
 canvas.height=h-100
 canvas.width=w-80
 let scale = 5
+let ARR
 //////////////////////////////////////////////////////////////////////////
 // Generate
 function generate() {
@@ -24,7 +25,7 @@ for (let i=0; i<canvas.width; i+=scale) {
     arr.push(rand)
     }
   draw(arr)
-  return arr
+  ARR = arr
 }
 //////////////////////////////////////////////////////////////////////////
 // Get random
@@ -60,32 +61,36 @@ export function swap(arr, i, j){
 }
 //////////////////////////////////////////////////////////////////////////
 // bubble sort
-function bubbleSort(){
-  let arr = generate()
-  let animation = bubble(arr)
+function bubbleSort(arr){
+  let array = arr.slice()
+  draw(array)
+  let animation = bubble(array)
   animate(animation)
 }
 //////////////////////////////////////////////////////////////////////////
 // selection sort
-function selectionSort(){
-  let arr = generate()
-  let animation = selection(arr)
+function selectionSort(arr){
+  let array = arr.slice()
+  draw(array)
+  let animation = selection(array)
   animate(animation)
 }
 
 //////////////////////////////////////////////////////////////////////////
 // insertion sort
-function insertionSort(){
-  let arr = generate()
-  let animation = insertion(arr)
+function insertionSort(arr){
+  let array = arr.slice()
+  draw(array)
+  let animation = insertion(array)
   animate(animation)
 }
 /////////////////////////////////////////////////////////////////////////////////
 // merge sort
-function mergeSort(){
-  let arr = generate()
+function mergeSort(arr){
+  let array = arr.slice()
   let arrayCopy = arr.slice(0)
-  let animation = merge(arr)
+  let animation = merge(array)
+  draw(array)
   let d = 0
   let a = 0
   animation.forEach((x) => {
@@ -102,16 +107,18 @@ function mergeSort(){
 }
 /////////////////////////////////////////////////////////////////////////////////
 // quick sort
-function quickSort(){
-  let arr = generate()
-  let animation = quick(arr)
+function quickSort(arr){
+  let array = arr.slice()
+  draw(array)
+  let animation = quick(array)
   animate(animation)
 }
 /////////////////////////////////////////////////////////////////////////////////
 // heap sort
-function heapSort(){
-  let arr = generate()
-  let animation = heap(arr)
+function heapSort(arr){
+  let array = arr.slice()
+  draw(array)
+  let animation = heap(array)
   animate(animation)
 }
 
@@ -125,31 +132,36 @@ function dropdownlist(){
 // onclick sort
 function sort() {
   document.querySelector(".buttons").style.pointerEvents = "none"
-  let slct = dropdownlist()
+  const arr = ARR
+  const slct = dropdownlist()
   switch(slct){
     case "bubble":
-      bubbleSort();
+      bubbleSort(arr);
       break;
     case "selection":
-      selectionSort();
+      selectionSort(arr);
       break;
     case "insertion":
-      insertionSort();
+      insertionSort(arr);
       break;
     case "merge":
-      mergeSort()
+      mergeSort(arr)
       break;
     case "quick":
-      quickSort()
+      quickSort(arr)
       break;
     case "heap":
-      heapSort()
+      heapSort(arr)
       break;
   }
 }
 
+function Gen(){
+  const arr = generate()
+  sortBtn.addEventListener('click', () => sort(arr))
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Events
-genBtn.addEventListener('click', generate)
-sortBtn.addEventListener('click', sort)
+genBtn.addEventListener('click', Gen)
 droplist.addEventListener('change', dropdownlist)
